@@ -43,4 +43,3 @@ class Vector3D:
         if self.x * other.x + self.y * other.y + self.z * other.z == 0:
             return True
 
-    
