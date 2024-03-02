@@ -1,5 +1,6 @@
 import math
 
+
 class Punkt2D:
     def __init__(self, x, y):
         self.x = x
@@ -8,6 +9,7 @@ class Punkt2D:
     def __str__(self):
         return f"Punkt2D({self.x}, {self.y})"
 
+    # awdasdawda
     def dlugosc(self):
         return math.sqrt(self.x ** 2 + self.y ** 2)
 
@@ -25,6 +27,7 @@ class Punkt2D:
     def __add__(self, other):
         return Punkt2D(self.x + other.x, self.y + other.y)
 
+
 # Przykłady użycia:
 punkt1 = Punkt2D(3, 4)
 print(punkt1)  # Powinno wydrukować: Punkt2D(3, 4)
@@ -41,4 +44,4 @@ punkt2.przesun(3, 1)
 print(punkt1 == punkt2)  # Powinno wydrukować: True
 
 p3 = punkt1 + punkt2
-print(p3)                # Powinno wydrukować Punkt2D(8,4) 
+print(p3)  # Powinno wydrukować Punkt2D(8,4)
