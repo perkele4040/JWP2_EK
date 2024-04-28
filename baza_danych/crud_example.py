@@ -1,9 +1,9 @@
 from sqlalchemy import create_engine, Column, Integer, String, text
 from sqlalchemy.orm import declarative_base, Session
 
-
 engine = create_engine('sqlite+pysqlite:///:memory:', echo=True, future=True)
 Base = declarative_base()
+
 
 # Definicja klasy reprezentującej tabelę w bazie danych
 class User(Base):
@@ -11,6 +11,7 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String)
     age = Column(Integer)
+
 
 # Tworzenie wszystkich tabel
 Base.metadata.create_all(engine)
@@ -29,7 +30,7 @@ with Session(engine) as session:
 
 # aktualizacja istniejącego rekordu
 with Session(engine) as session:
-    user_to_update = session.get(User, 1) # Zalóżmy, że rekord z ID 1 istnieje
+    user_to_update = session.get(User, 1)  # Zalóżmy, że rekord z ID 1 istnieje
     if user_to_update:
         user_to_update.name = "Jan Nowak"
         session.commit()
@@ -39,7 +40,6 @@ with Session(engine) as session:
     users = session.execute(text("SELECT * FROM users")).all()
     for user in users:
         print(f'{user.name}, {user.age}')
-
 
 # Usuwanie rekordy z bazy
 with Session(engine) as session:
