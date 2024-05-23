@@ -1,7 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
-from dbinit import Animals
-
-from dbinit import db
+from dbinit import Animals, Employees, Enclosures
 
 
 class DBConnector:
@@ -15,6 +12,9 @@ class DBConnector:
         return tables
 
     def get_animals(self):
-        print(db.session.query(Animals, id).all)
-        return 'in progress'
+        animals = []
+        for animal in self.db.session.query(Animals).all():
+            animals.append([animal.species, animal.enclosure])
+        return animals
+
 
