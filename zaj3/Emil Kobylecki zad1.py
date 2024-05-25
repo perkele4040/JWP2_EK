@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
+
 
 db = SQLAlchemy()
 app = Flask(__name__)
@@ -16,7 +17,15 @@ def get_teachers():
 
 @app.route('/html_test', methods=['GET'])
 def html_test():
-    return render_template('form.html')
+    return render_template('form1.html')
+
+
+@app.route('/add_teacher', methods=['POST'])
+def add_teacher():
+    teacherName = request.form['teacherName']
+    teacherSubject = request.form['teacherSubject']
+    teacherTime = request.form['teacherTime']
+    print(teacherName)
 
 
 class Teacher(db.Model):
