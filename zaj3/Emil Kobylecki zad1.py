@@ -20,13 +20,14 @@ def html_test():
     return render_template('form1.html')
 
 
-@app.route('/add_teacher', methods=['POST'])
+@app.route('/add_teacher', methods=['GET', 'POST'])
 def add_teacher():
-    teacherName = request.form['teacherName']
-    teacherSubject = request.form['teacherSubject']
-    teacherTime = request.form['teacherTime']
-    print(teacherName)
-
+    if request.method == 'POST':
+        teacherName = request.form['teacherName']
+        teacherSubject = request.form['teacherSubject']
+        teacherTime = request.form['teacherTime']
+        print(teacherName)
+    return render_template('form2.html')
 
 class Teacher(db.Model):
     __tablename__ = "ANIMALS"
