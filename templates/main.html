@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/static/styles.css">
+        <title>Task management</title>
+        <script type = "text/javascript"
+             src = "{{ url_for('static', filename = 'script.js') }}" ></script>
+
+    </head>
+    <body>
+        <p><input type="text" id="name" size="25" placeholder="task name here"><input type = "button" onclick = "add_task()" value = "Add" /></p>
+
+        <table border = 2>
+            {% for t in tasks %}
+                <div>id:{{ t[0] }},  name: {{ t[1] }}
+                <input type = "button" onclick = "edit_task({{ t[0] }})" value = "Edit" />
+                <input type = "button" onclick = "remove_task({{ t[0] }}) " value = "Remove" /></div>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>
