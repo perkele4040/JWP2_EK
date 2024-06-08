@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3b6dd3-d91d-49f7-a536-c0453a4c4308" name="Changes" comment="zaj3 zad2 in progress">
-      <change afterPath="$PROJECT_DIR$/zaj3/templates/form2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zaj3/Emil Kobylecki zad1.py" beforeDir="false" afterPath="$PROJECT_DIR$/zaj3/Emil Kobylecki zad1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +57,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -135,7 +133,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.10 (zaj2)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Zoo/zoo" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -221,6 +218,7 @@
       <workItem from="1714306923440" duration="4368000" />
       <workItem from="1716619074882" duration="630000" />
       <workItem from="1716619734610" duration="5262000" />
+      <workItem from="1717855357535" duration="295000" />
     </task>
     <task id="LOCAL-00001" summary="zaj2 reading from census DB">
       <option name="closed" value="true" />
