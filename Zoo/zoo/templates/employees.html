@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/static/styles.css">
+        <title>List of employees in the zoo</title>
+    </head>
+    <body>
+    <div>List of employees in the zoo</div>
+        <table border = 2>
+            <tr>
+                <th>ID</th>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+            </tr>
+            {% for e in employees %}
+            <tr>
+                <td>{{ e.id }}</td>
+                <td>{{ e.first_name }}</td>
+                <td>{{ e.last_name }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

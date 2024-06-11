@@ -1,4 +1,5 @@
-from dbinit import Animals, Employees, Enclosures
+from dbinit import Animals, Employees, Enclosures, Users
+from werkzeug.security import check_password_hash
 
 
 class DBConnector:
@@ -12,9 +13,20 @@ class DBConnector:
         return tables
 
     def get_animals(self):
-        animals = []
-        for animal in self.db.session.query(Animals).all():
-            animals.append([animal.species, animal.enclosure])
-        return animals
+        return self.db.session.query(Animals).all()
 
+    def get_enclosures(self):
+        return self.db.session.query(Enclosures).all()
 
+    def get_employees(self):
+        return self.db.session.query(Employees).all()
+
+    def authenticate(self, username, password):
+        users = self.get_users()
+        for u in users:
+            if username == u.email and check_password_hash(u.password, password):
+                return True
+        return False
+
+    def get_users(self):
+        return self.db.session.query(Users).all()

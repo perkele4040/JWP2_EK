@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/static/styles.css">
+        <title>List of tables</title>
+    </head>
+    <body>
+    <div>List of tables</div>
+        <table border = 2>
+            {% for t in tables %}
+                <div>{{ t }}</div>
+            {% endfor %}
+        </table>
+    </body>
+</html>
