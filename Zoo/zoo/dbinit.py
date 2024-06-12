@@ -39,8 +39,9 @@ class Users(db.Model):
     email = db.Column(db.String(255), nullable=False)
     password = db.Column(db.String(255), nullable=False)
 
-a1 = Animals(id=0, name='Fred', enclosure=1, species='Iguana')
-a2 = Animals(id=1, name='Szymon', enclosure=2, species='Kangaroo')
+
+a1 = Animals(id=0, name='Fred', enclosure=0, species='Iguana')
+a2 = Animals(id=1, name='Szymon', enclosure=1, species='Kangaroo')
 e1 = Enclosures(id=0, location='here', inhabitant=0)
 e2 = Enclosures(id=1, location='there', inhabitant=1)
 em1 = Employees(id=0, first_name='Mike', last_name='Wazowski')

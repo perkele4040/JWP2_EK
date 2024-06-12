@@ -6,11 +6,17 @@
         <title>List of tables</title>
     </head>
     <body>
-    <div>List of tables</div>
+        {% if user==None: %}
+        <p align="right"> User not logged in </p>
+        {% else: %}
+        <p align="right"> Logged in as {{user}} </p>
+        {% endif %}
+        <p align="left"> List of tables </p>
         <table border = 2>
             {% for t in tables %}
                 <div>{{ t }}</div>
             {% endfor %}
         </table>
+
     </body>
 </html>

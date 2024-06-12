@@ -4,22 +4,43 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="/static/styles.css">
         <title>List of employees in the zoo</title>
+        <script type = "text/javascript"
+             src = "{{ url_for('static', filename = 'script.js') }}" ></script>
     </head>
     <body>
-    <div>List of employees in the zoo</div>
+        {% if user==None: %}
+        <p align="right"> User not logged in </p>
+        {% else: %}
+        <p align="right"> Logged in as {{user}} </p>
+        {% endif %}
+        <div>List of employees in the zoo</div>
         <table border = 2>
             <tr>
                 <th>ID</th>
                 <th>FIRST NAME</th>
                 <th>LAST NAME</th>
+                {% if user!=None: %}
+                <th>ACTIONS</th>
+                {% endif %}
             </tr>
             {% for e in employees %}
             <tr>
                 <td>{{ e.id }}</td>
                 <td>{{ e.first_name }}</td>
                 <td>{{ e.last_name }}</td>
+                {% if user!=None: %}
+                    <td>
+                        <input type = "button" onclick = "edit_employee({{ e.id }})" value = "Edit" />
+                        <input type = "button" onclick = "remove_employee({{ e.id }})" value = "Remove" />
+                    </td>
+                {% endif %}
             </tr>
             {% endfor %}
         </table>
+        {% if user!=None: %}
+            <p><input type="text" id="first-name" size="25" placeholder="First name">
+            <input type="text" id="last-name" size="25" placeholder="Last name">
+            <input type = "button" onclick = "add_employee()" value = "Add employee" /></p>
+        {% endif %}
     </body>
 </html>

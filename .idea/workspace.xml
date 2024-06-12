@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca3b6dd3-d91d-49f7-a536-c0453a4c4308" name="Changes" comment="zaj3 zad2 in progress">
-      <change afterPath="$PROJECT_DIR$/Zoo/zoo/static/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zoo/zoo/static/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zoo/zoo/templates/animals.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zoo/zoo/templates/employees.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zoo/zoo/templates/enclosures.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zoo/zoo/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zoo/zoo/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zoo/zoo/templates/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zoo/zoo/templates/tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/JWP2_EK.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JWP2_EK.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ca3b6dd3-d91d-49f7-a536-c0453a4c4308" name="Changes" comment="added htmls for new pages&#10;added endpoints for different tables&#10;added Basic Auth handling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zoo/zoo/dbconnector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zoo/zoo/dbconnector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zoo/zoo/dbinit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zoo/zoo/dbinit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zoo/zoo/instance/zoo.db" beforeDir="false" afterPath="$PROJECT_DIR$/Zoo/zoo/instance/zoo.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zoo/zoo/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Zoo/zoo/static/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zoo/zoo/templates/animals.html" beforeDir="false" afterPath="$PROJECT_DIR$/Zoo/zoo/templates/animals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zoo/zoo/templates/employees.html" beforeDir="false" afterPath="$PROJECT_DIR$/Zoo/zoo/templates/employees.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zoo/zoo/templates/enclosures.html" beforeDir="false" afterPath="$PROJECT_DIR$/Zoo/zoo/templates/enclosures.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zoo/zoo/templates/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/Zoo/zoo/templates/tables.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zoo/zoo/webapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Zoo/zoo/webapp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +65,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/kobyl/PycharmProjects/JWP2_EK/Zoo/zoo/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -311,7 +305,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716624699202</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added htmls for new pages&#10;added endpoints for different tables&#10;added Basic Auth handling">
+      <option name="closed" value="true" />
+      <created>1718146121788</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718146121789</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added htmls for new pages&#10;added endpoints for different tables&#10;added Basic Auth handling">
+      <option name="closed" value="true" />
+      <created>1718146283115</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718146283115</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +343,8 @@
     <MESSAGE value="zaj3 zad1" />
     <MESSAGE value="zaj3 zad2 in progress" />
     <MESSAGE value="fixed get-animals" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed get-animals" />
+    <MESSAGE value="added htmls for new pages&#10;added endpoints for different tables&#10;added Basic Auth handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="added htmls for new pages&#10;added endpoints for different tables&#10;added Basic Auth handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

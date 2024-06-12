@@ -4,23 +4,44 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="/static/styles.css">
         <title>List of enclosures in the zoo</title>
+        <script type = "text/javascript"
+             src = "{{ url_for('static', filename = 'script.js') }}" ></script>
     </head>
     <body>
-    <div>List of enclosures in the zoo</div>
+        {% if user==None: %}
+            <p align="right"> User not logged in </p>
+        {% else: %}
+            <p align="right"> Logged in as {{user}} </p>
+        {% endif %}
+        <div>List of enclosures in the zoo</div>
         <table border = 2>
             <tr>
                 <th>ID</th>
                 <th>LOCATION</th>
                 <th>INHABITANT</th>
+                {% if user!=None: %}
+                <th>ACTIONS</th>
+                {% endif %}
             </tr>
             {% for e in enclosures %}
             <tr>
                 <td>{{ e.id }}</td>
                 <td>{{ e.location }}</td>
                 <td>{{ e.inhabitant }}</td>
+                {% if user!=None: %}
+                    <td>
+                        <input type = "button" onclick = "edit_enclosure({{ e.id }})" value = "Edit" />
+                        <input type = "button" onclick = "remove_enclosure({{ e.id }})" value = "Remove" />
+                    </td>
+                {% endif %}
             </tr>
             {% endfor %}
 
         </table>
+        {% if user!=None: %}
+            <p><input type="text" id="location" size="25" placeholder="Location">
+            <input type="text" id="inhabitant" size="25" placeholder="Inhabitant">
+            <input type = "button" onclick = "add_enclosure()" value = "Add enclosure" /></p>
+        {% endif %}
     </body>
 </html>
